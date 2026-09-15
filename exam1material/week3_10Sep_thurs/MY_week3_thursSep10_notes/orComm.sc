@@ -12,26 +12,20 @@ import org.sireum.justification.natded.prop._
         Proof(
             //PROOF GOES HERE
             1 ( p | q )     by Premise,
-
-            //use OrE subproofs
-
-            //case where p is true
-            //show that q | p is true
             2 SubProof(
-                3 Assume ( p ),
-                4 ( q | p ) by OrI2(3)
+                3 Assume ( p ), 
+                4 ( q | p ) by OrI2(3), 
             ),
             5 SubProof(
                 6 Assume ( q ),
-                7 ( q | p ) by OrI1(6)
+                7 ( q | p ) by OrI1(6),
             ),
-            //claim my common conclusion
+            //claim my common conclusion 
             //OrE line numbers:
-                //OrE(originalOr, )
+                //og or and the assumptions
+                //has to match premise 
             8 ( q | p ) by OrE(1, 2, 5)
-            
-            //case where q is true
-                //show that q | p is true
+
         )
     )
 }
