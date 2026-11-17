@@ -17,18 +17,14 @@ import org.sireum.justification.natded.prop._
           6 ( q __>: r ) by ImplyE(1, 5),
           7 ( q ) by ImplyE(3, 5),
           8 ( r ) by ImplyE(6, 7)
-
           //goal: r, RHS of goal implies
         ),
-        9 ( p __>: r) by ImplyI(4)
-
-        //nest implyi to create p __>: r
+        9 ( p __>: r ) by ImplyI(4)
+        //nest implyi to creat p __>: r
         //goal: RHS of implies, p __>: r
       ),
       10 ( (p __>: q) __>: (p __>: r) ) by ImplyI(2)
-
-      //goal is implies: (p __>: q) __>: (p __>: r) 
-
+      //goal is implies: (p __>: q) __>: (p __>: r)
     )
   )
 }
